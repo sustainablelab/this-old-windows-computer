@@ -9910,7 +9910,7 @@ Error message and password prompt
 <div created="20191227212754790" modified="20191227212910894" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20191230002115604" list="Contents [[What is this?]]" modified="20191230002115604" title="$:/StoryList">
+<div created="20200105220443158" list="[[Linux Mint]] Contents Installed Cygwin [[What is this?]]" modified="20200105220450827" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191228080007433" modified="20191228080007433" title="$:/temp/HidePluginWarning">
@@ -9929,19 +9929,19 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;https://sustainablelab.github.io/this-old-windows-computer/&quot;
+            &quot;text&quot;: &quot;file:///C:/cygwin64/home/Mike/tiddlywiki/this-old-windows-computer/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;sustainablelab.github.io&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;sustainablelab.github.io&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;https:&quot;
+            &quot;text&quot;: &quot;file:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -9949,7 +9949,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/this-old-windows-computer/&quot;
+            &quot;text&quot;: &quot;/C:/cygwin64/home/Mike/tiddlywiki/this-old-windows-computer/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9957,7 +9957,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;https://sustainablelab.github.io&quot;
+            &quot;text&quot;: &quot;file://&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -11201,13 +11201,64 @@ You should have received a copy of the GNU General Public License along with Gia
 ! Just list the ''audio'' programs
 &lt;&lt;list-links filter:&quot;[tag[audio]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20191228093354285" modified="20191228094028348" tags="[[Not installed]]" title="Linux Mint">
+<div created="20191228093354285" modified="20200105221941216" tags="[[Not installed]]" title="Linux Mint">
 <pre>! Linux Mint
 * `linuxmint-19.3-cinnamon-64bit.iso`
 ** verified checksum and gpg for Linux Mint 19.3
 * in the `Downloads` folder
 * not installed
 ** something we might want to do in the near future
+
+! SHA and GPG key
+The following are my notes while following the guide here: https://linuxmint.com/verify.php
+
+* download the checksum .txt and .txt.gpg files:
+** sha256sum.txt
+** sha256sum.txt.gpg
+
+* calculate the `sha256` checksum of the `.iso` in `bash`:
+
+```bash
+$ sha256sum.exe linuxmint-19.3-cinnamon-64bit.iso
+7a9e54212433c8547edfd789ac933c91a9bde1a61196fa7977c5357a2c40
+```
+
+* confirm this matches the checksum in the downloaded file
+* check the signature on the downloaded file by validating the gpg key
+* download the key:
+
+```bash
+$ gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-key &quot;27DE B156 44C6 B3CF 3BD7  D291 300F 846B A25B AE09&quot;
+
+gpg: requesting key A25BAE09 from hkp server keyserver.ubuntu.com
+gpg: key A25BAE09: public key &quot;Linux Mint ISO Signing Key &lt;root@linuxmint.com&gt;&quot; imported
+gpg: no ultimately trusted keys found
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+```
+
+* verify:
+
+```bash
+$ gpg --verify sha256sum.txt.gpg sha256sum.txt
+gpg: Signature made Mon, Dec 16, 2019 10:10:16 AM EST using RSA key ID A25BAE09
+gpg: Good signature from &quot;Linux Mint ISO Signing Key &lt;root@linuxmint.com&gt;&quot;
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 27DE B156 44C6 B3CF 3BD7  D291 300F 846B A25B AE09
+```
+
+According to the guide, this is correct:
+
+&gt; The output of the last command should tell you that the file signature is
+&gt; 'good' and that it was signed with the following key: 27DE B156 44C6 B3CF 3BD7
+&gt; D291 300F 846B A25B AE09 (with or without spaces).
+
+&gt; Note: Unless you trusted this signature in the past, or a signature which
+&gt; trusted it, GPG should warn you that the signature is not trusted. This is
+&gt; expected and perfectly normal.
+
+
 </pre>
 </div>
 <div created="20191228093926654" modified="20191228094000280" tags="ToC" title="Not installed">
