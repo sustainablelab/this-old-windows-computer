@@ -147,6 +147,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions</li>
 
+<li>$:/config/WikiParserRules/Inline/wikilink</li>
+
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -165,6 +167,8 @@ Error message and password prompt
 
 <li>$:/palette</li>
 
+<li>$:/palettes/Badwolf</li>
+
 <li>$:/plugins/tiddlywiki/markdown</li>
 
 <li>$:/SiteSubtitle</li>
@@ -173,9 +177,15 @@ Error message and password prompt
 
 <li>$:/state/Excise/--1089608939/tagnew</li>
 
+<li>$:/state/Excise/--236611271/tagnew</li>
+
+<li>$:/state/Excise/--236611271/type</li>
+
 <li>$:/state/Excise/-1207107305/type</li>
 
 <li>$:/state/Excise/-254659784/tagnew</li>
+
+<li>$:/state/import/select-all</li>
 
 <li>$:/state/Link/--1502361583/search</li>
 
@@ -184,6 +194,8 @@ Error message and password prompt
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
+
+<li>$:/state/tab/moresidebar-1850697562</li>
 
 <li>$:/state/tab/sidebar--595412856</li>
 
@@ -397,6 +409,8 @@ Error message and password prompt
 
 <li>Audacity</li>
 
+<li>Audio Work Station</li>
+
 <li>Brave</li>
 
 <li>Browse in private mode</li>
@@ -419,11 +433,15 @@ Error message and password prompt
 
 <li>Giada manual</li>
 
+<li>Giada on Raspberry Pi</li>
+
 <li>Install browser extensions</li>
 
 <li>Installed</li>
 
 <li>Linux Mint</li>
+
+<li>Matt's new Acer Windows 10 computer</li>
 
 <li>Not installed</li>
 
@@ -475,6 +493,9 @@ Error message and password prompt
 </div>
 <div created="20191227212800850" modified="20191227212800850" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions">
 <pre>show</pre>
+</div>
+<div created="20200114161307670" modified="20200114161307670" title="$:/config/WikiParserRules/Inline/wikilink">
+<pre>disable</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.21">
 <pre>{
@@ -9669,8 +9690,9 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20191227213209509" modified="20191227223543161" title="$:/DefaultTiddlers">
-<pre>Contents
+<div created="20191227213209509" modified="20200114160057786" title="$:/DefaultTiddlers">
+<pre>[[Audio Work Station]]
+Contents
 [[What is this?]]</pre>
 </div>
 <div created="20191230002218405" modified="20191230002219274" title="$:/GitHub/Filename">
@@ -9685,21 +9707,132 @@ Error message and password prompt
 <div created="20191230002146960" modified="20191230002146960" title="$:/GitHub/Username">
 <pre>sustainablelab@gmail.com</pre>
 </div>
-<div plugin-type="import" status="pending" title="$:/Import" type="application/json">
-<pre>{
-    &quot;tiddlers&quot;: {
-        &quot;Untitled&quot;: {
-            &quot;title&quot;: &quot;Untitled&quot;,
-            &quot;text&quot;: &quot;Linux Mint 1&quot;
-        }
-    }
-}</pre>
+<div status="complete" title="$:/Import">
+<pre>The following tiddlers were imported:
+
+# [[$:/palettes/Badwolf]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20191227212817192" modified="20191227212817192" title="$:/palette">
-<pre>$:/palettes/Nord</pre>
+<div created="20191227212817192" modified="20200114155941484" title="$:/palette">
+<pre>$:/palettes/Badwolf</pre>
+</div>
+<div created="20200109181139603" description="Steve Losh's Badwolf for TiddlyWiki" modified="20200109192004436" name="Badwolf" tags="$:/tags/Palette" title="$:/palettes/Badwolf" type="application/x-tiddler-dictionary">
+<pre>alert-background: #D08770
+alert-border: #D08770
+alert-highlight: #B48EAD
+alert-muted-foreground: #4C566A
+background: #1c1b1a
+blockquote-bar: &lt;&lt;colour muted-foreground&gt;&gt;
+button-background: #4C566A
+button-foreground: #D8DEE9
+button-border: transparent
+code-background: #2E3440
+code-border: #2E3440
+code-foreground: #BF616A
+diff-delete-background: #BF616A
+diff-delete-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-equal-background: 
+diff-equal-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-insert-background: #A3BE8C
+diff-insert-foreground: &lt;&lt;colour foreground&gt;&gt;
+diff-invisible-background: 
+diff-invisible-foreground: &lt;&lt;colour muted-foreground&gt;&gt;
+dirty-indicator: #BF616A
+download-background: #A3BE8C
+download-foreground: &lt;&lt;colour background&gt;&gt;
+dragger-background: &lt;&lt;colour foreground&gt;&gt;
+dragger-foreground: &lt;&lt;colour background&gt;&gt;
+dropdown-background: &lt;&lt;colour background&gt;&gt;
+dropdown-border: &lt;&lt;colour background&gt;&gt;
+dropdown-tab-background-selected: #ECEFF4
+dropdown-tab-background: #4C566A
+dropzone-background: #A3BE8C
+external-link-background-hover: inherit
+external-link-background-visited: inherit
+external-link-background: inherit
+external-link-foreground-hover: inherit
+external-link-foreground-visited: #5E81AC
+external-link-foreground: #8FBCBB
+foreground: #d8dee9
+message-background: #2E3440
+message-border: #2E3440
+message-foreground: #547599
+modal-backdrop: &lt;&lt;colour foreground&gt;&gt;
+modal-background: &lt;&lt;colour background&gt;&gt;
+modal-border: #3b4252
+modal-footer-background: #3b4252
+modal-footer-border: #3b4252
+modal-header-border: #3b4252
+muted-foreground: #4C566A
+notification-background: &lt;&lt;colour primary&gt;&gt;
+notification-border: #EBCB8B
+page-background: #141413
+pre-background: #2E3440
+pre-border: #2E3440
+primary: #ff2c4b
+select-tag-background: #3b4252
+select-tag-foreground: &lt;&lt;colour foreground&gt;&gt;
+sidebar-button-foreground: &lt;&lt;colour foreground&gt;&gt;
+sidebar-controls-foreground-hover: #4C566A
+sidebar-controls-foreground: #3B4252
+sidebar-foreground-shadow: transparent
+sidebar-foreground: #D8DEE9
+sidebar-muted-foreground-hover: #4C566A
+sidebar-muted-foreground: #4C566A
+sidebar-tab-background-selected: #ECEFF4
+sidebar-tab-background: #4C566A
+sidebar-tab-border-selected: &lt;&lt;colour tab-border-selected&gt;&gt;
+sidebar-tab-border: #4C566A
+sidebar-tab-divider: &lt;&lt;colour page-background&gt;&gt;
+sidebar-tab-foreground-selected: #4C566A
+sidebar-tab-foreground: &lt;&lt;colour tab-foreground&gt;&gt;
+sidebar-tiddler-link-foreground-hover: #A3BE8C
+sidebar-tiddler-link-foreground: #81A1C1
+site-title-foreground: &lt;&lt;colour tiddler-title-foreground&gt;&gt;
+static-alert-foreground: #B48EAD
+tab-background-selected: #ECEFF4
+tab-background: #4C566A
+tab-border-selected: #4C566A
+tab-border: #4C566A
+tab-divider: #4C566A
+tab-foreground-selected: #4C566A
+tab-foreground: #D8DEE9
+table-border: #4C566A
+table-footer-background: #2e3440
+table-header-background: #2e3440
+tag-background: #cc1c2b
+tag-foreground: #d8dee9
+tiddler-background: &lt;&lt;colour background&gt;&gt;
+tiddler-border: &lt;&lt;colour background&gt;&gt;
+tiddler-controls-foreground-hover: 
+tiddler-controls-foreground-selected: #EBCB8B
+tiddler-controls-foreground: #4C566A
+tiddler-editor-background: #2e3440
+tiddler-editor-border-image: #2e3440
+tiddler-editor-border: #2e3440
+tiddler-editor-fields-even: #2e3440
+tiddler-editor-fields-odd: #2e3440
+tiddler-info-background: #2e3440
+tiddler-info-border: #2e3440
+tiddler-info-tab-background: #2e3440
+tiddler-link-background: &lt;&lt;colour background&gt;&gt;
+tiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;
+tiddler-subtitle-foreground: #d8dee9
+tiddler-title-foreground: #ff2c4b
+toolbar-new-button: 
+toolbar-options-button: 
+toolbar-save-button: 
+toolbar-info-button: 
+toolbar-edit-button: 
+toolbar-close-button: 
+toolbar-delete-button: 
+toolbar-cancel-button: 
+toolbar-done-button: 
+untagged-background: #2d3038
+very-muted-foreground: #2d3038
+</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="Markdown parser" list="readme usage" plugin-type="plugin" title="$:/plugins/tiddlywiki/markdown" type="application/json" version="5.1.21">
 <pre>{
@@ -9891,11 +10024,20 @@ Error message and password prompt
 <div created="20191227235239862" modified="20191227235239862" title="$:/state/Excise/--1089608939/tagnew">
 <pre>yes</pre>
 </div>
+<div created="20200114203623508" modified="20200114203623508" title="$:/state/Excise/--236611271/tagnew">
+<pre>yes</pre>
+</div>
+<div created="20200114203625754" modified="20200114203625754" title="$:/state/Excise/--236611271/type">
+<pre>link</pre>
+</div>
 <div created="20191228000003369" modified="20191228000003369" title="$:/state/Excise/-1207107305/type">
 <pre>macro</pre>
 </div>
 <div created="20191228054204737" modified="20191228054204737" title="$:/state/Excise/-254659784/tagnew">
 <pre>yes</pre>
+</div>
+<div created="20200114155852785" modified="20200114155852785" title="$:/state/import/select-all">
+<pre>unchecked</pre>
 </div>
 <div created="20191227213125787" modified="20191227213125787" title="$:/state/Link/--1502361583/search">
 <pre>https://chrome.google.com/webstore/category/extensions</pre>
@@ -9903,16 +10045,19 @@ Error message and password prompt
 <div created="20191228075954203" modified="20191228075955740" title="$:/state/plugin-info--896887961-$:/core">
 <pre>no</pre>
 </div>
-<div created="20191228075948921" modified="20191230002232741" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Saving</pre>
+<div created="20191228075948921" modified="20200114161255243" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Settings</pre>
 </div>
 <div created="20191230002119097" modified="20191230002224033" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20191227212754790" modified="20191227212910894" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20200114155840705" modified="20200114155840706" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20200106162940329" list="[[Set up Git]] Cygwin Contents [[What is this?]]" modified="20200106162940329" title="$:/StoryList">
+<div created="20191227212754790" modified="20200114161642232" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
+</div>
+<div list="[[Audio Work Station]] Contents [[What is this?]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191228080007433" modified="20191228080007433" title="$:/temp/HidePluginWarning">
@@ -9931,19 +10076,19 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;https://sustainablelab.github.io/this-old-windows-computer/&quot;
+            &quot;text&quot;: &quot;file:///C:/cygwin64/home/Mike/tiddlywiki/this-old-windows-computer/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;sustainablelab.github.io&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;sustainablelab.github.io&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;https:&quot;
+            &quot;text&quot;: &quot;file:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -9951,7 +10096,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/this-old-windows-computer/&quot;
+            &quot;text&quot;: &quot;/C:/cygwin64/home/Mike/tiddlywiki/this-old-windows-computer/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9959,7 +10104,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;https://sustainablelab.github.io&quot;
+            &quot;text&quot;: &quot;file://&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -10735,8 +10880,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20191228080000599" modified="20191228080001297" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre>markdown</pre>
 </div>
-<div created="20191227213427429" modified="20200106183049760" title="$:/temp/search">
-<pre>git</pre>
+<div created="20191227213427429" modified="20200114155604717" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20191228075958563" modified="20191228075958563" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
 <pre>loaded</pre>
@@ -10871,6 +11016,35 @@ https://www.audacityteam.org/download/windows/
 ! Install
 * double-click installer
 </pre>
+</div>
+<div created="20200114160423276" modified="20200114203641486" title="Audio Work Station">
+<pre>! Sat, Jan 18 2020
+* [ ] Get schedule from Elaine, call Matt with heads-up on time
+
+!! Goals for Saturday
+* Set up Matt's [[new Acer Windows 10 computer|Matt's new Acer Windows 10 computer]]
+* Set up Audacity
+** Test recording audio from mixer
+*** [ ] pack cables to bring:
+*** Combine the following to make a 15-foot-long cable that is two 1/4&quot; mono out from mixer to one 1/8&quot; stereo for line in on computer
+*** [[Hosa YMP-434 3.5 mm TRSF to Dual 1/4&quot; TS Stereo Breakout Cable|https://www.amazon.com/Hosa-YMP-434-Stereo-Breakout-Cable/dp/B0010D0HO0/]]
+*** [[FosPower Audio Cable (15 FT), Stereo Audio 3.5mm Auxiliary Short Cord Male to Male|https://www.amazon.com/FosPower-Stereo-Auxiliary-iPhone-Samsung/dp/B00LBJ780O]]
+** list pain points for DAW
+*** example pain point: managing samples (sort by length, type, etc.)
+** research an open-source DAW
+* Set up workflow for samples:
+** 4K Video Downloader to grab audio from YouTube
+** slice into samples in Audacity
+** import samples and assign key presses in Giada
+
+!! Long term goals
+* TiddlyWiki to document modular patches
+* Git to collaborate on audio projects
+
+! Questions
+* How does the computer handle ''audio out'' (e.g., to EvanTide) and ''audio
+* in'' (for recording) at the ''same time''?
+* This question inspired an [[idea for a Raspberry Pi project|Giada on Raspberry Pi]]</pre>
 </div>
 <div created="20191227212928755" modified="20191228011439192" tags="installed" title="Brave">
 <pre>! Brave web browser
@@ -11192,6 +11366,13 @@ Giada - Your Hardcore Loopmachine is distributed in the hope that it will be use
 
 You should have received a copy of the GNU General Public License along with Giada - Your Hardcore Loopmachine. If not, see &lt;http://www.gnu.org/licenses/&gt;.</pre>
 </div>
+<div created="20200114203628696" modified="20200114203810743" tags="[[Audio Work Station]]" title="Giada on Raspberry Pi">
+<pre>* Raspberry Pi running Giada
+* permanently connected to Mutable ''Clouds''
+* update patches via Git over internet connection
+* USB keyboard
+* screen not necessary, but maybe use old iPad as terminal to access Pi</pre>
+</div>
 <div created="20191228011435184" modified="20191228011951989" tags="[[how to]]" title="Install browser extensions">
 <pre>* install //extensions// by visiting the //Chrome Web Store//: https://chrome.google.com/webstore/category/extensions
 * record configurations or other info about the extension in this tiddler: [[Browser extensions]]</pre>
@@ -11261,6 +11442,45 @@ According to the guide, this is correct:
 &gt; expected and perfectly normal.
 
 
+</pre>
+</div>
+<div created="20200114160622529" modified="20200114161628023" tags="" title="Matt's new Acer Windows 10 computer">
+<pre>[[This computer (newegg link)|https://www.newegg.com/p/1VK-0017-00CV1]] but with `32GB` of RAM.
+
+! Overview
+* Processor Model
+** Intel 9th Gen Core i5-9400
+* # of Cores
+** 6
+* Max Turbo Frequency
+** 4.10 GHz
+* Processor Base Frequency
+** 2.90 GHz
+* Storage
+** Solid-state drive (SSD) 1TB + 2TB Hard Drive Disk
+* System RAM
+** 16GB DDR4
+* Interface
+** 1x Headphone-out &amp; Audio-in Combo Jack
+** 1x RJ45 LAN Jack for LAN insert
+** 1x USB 3.1 Gen 2 Type-C
+** 2x HDMI Outputs
+** 1x USB 3.1 Type-C Gen 2 Port
+** 1x USB 3.1 Gen 2 Port
+** 1x Audio Port
+** 1x VGA Port
+** 4x USB 2.0 Ports
+** 2x USB 3.1 Gen 1 Ports
+* Connectivity
+** Wi-Fi 5 (802.11ac)
+** Bluetooth 5.0
+** Ethernet RJ-45 Integrated 10/100/1000 GbE LAN
+* Dimensions
+** 13.78&quot; x 6.42&quot; x 13.39&quot; inches
+* Weight
+** 15.25 lbs.
+* Operating system
+** Windows 10 Home, 64-bit
 </pre>
 </div>
 <div created="20191228093926654" modified="20191228094000280" tags="ToC" title="Not installed">
