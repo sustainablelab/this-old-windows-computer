@@ -191,6 +191,8 @@ Error message and password prompt
 
 <li>$:/state/plugin-info--896887961-$:/core</li>
 
+<li>$:/state/showeditpreview</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -418,6 +420,8 @@ Error message and password prompt
 <li>Browser extensions</li>
 
 <li>Check SHA checksum of downloaded file</li>
+
+<li>Connect to another LAN device with Steam</li>
 
 <li>Contents</li>
 
@@ -10047,8 +10051,11 @@ very-muted-foreground: #2d3038
 <div created="20191228075954203" modified="20191228075955740" title="$:/state/plugin-info--896887961-$:/core">
 <pre>no</pre>
 </div>
-<div created="20191228075948921" modified="20200114161255243" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Settings</pre>
+<div created="20200205173239570" modified="20200205173239570" title="$:/state/showeditpreview">
+<pre>yes</pre>
+</div>
+<div created="20191228075948921" modified="20200205184822125" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
 <div created="20191230002119097" modified="20191230002224033" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -10056,10 +10063,10 @@ very-muted-foreground: #2d3038
 <div created="20200114155840705" modified="20200114155840706" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/System</pre>
 </div>
-<div created="20191227212754790" modified="20200114161642232" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20191227212754790" modified="20200131133541058" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div list="[[Audio Work Station]] Contents [[What is this?]]" title="$:/StoryList">
+<div created="20200206131853674" list="[[Windows color]] [[Audio Work Station]] Contents [[What is this?]]" modified="20200206131853674" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191228080007433" modified="20191228080007433" title="$:/temp/HidePluginWarning">
@@ -10110,11 +10117,11 @@ very-muted-foreground: #2d3038
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1536&quot;
+            &quot;text&quot;: &quot;1280&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;864&quot;
+            &quot;text&quot;: &quot;720&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -10882,8 +10889,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20191228080000599" modified="20191228080001297" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre>markdown</pre>
 </div>
-<div created="20191227213427429" modified="20200116042330905" title="$:/temp/search">
-<pre></pre>
+<div created="20191227213427429" modified="20200131133526029" title="$:/temp/search">
+<pre>color</pre>
 </div>
 <div created="20191228075958563" modified="20191228075958563" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
 <pre>loaded</pre>
@@ -11171,6 +11178,74 @@ matt@DESKTOP-1EHPRB4 ~/temp
 $ ls
 
 ```</pre>
+</div>
+<div created="20200205173812242" modified="20200205205617102" tags="remote Windows" title="Connect to another LAN device with Steam">
+<pre>//Issue://
+
+* Working on Windows 10 computer, but want to remote desktop into Windows 8 computer to:
+** use the same mouse/keyboard/screen for both
+** push local content from either computer to a remote repo, then pull changes onto the other computer //without having to leave my chair//
+
+//Context://
+
+There are other (probably better) ways to do this, but I have the Steam devices ready-to-go, so this was the easiest way for me.
+
+//Drawbacks://
+
+Some drawbacks to this are
+
+* it's quite a few steps to get the connection set up
+* the `Win` key has no effect on the remote Windows 8 computer
+** TODO: fix this with an AutoHotKey map of `Win` to `CapsLock`
+* the clipboard is not shared
+** Windows 10 has an interesting clipboard sharing and clipboard history feature
+** Windows 8 does not have this
+** TODO: create LastPass //clipboard// note and copy-paste by editing this note
+* the laptop screen must stay open
+** closing the screen causes the display to stop updating
+** the computer still runs, but the remote screen is frozen
+** this is a dangerous scenario: you can switch applications and not realize it, clicking in random places
+** keep the laptop lid open
+
+//Concept://
+
+The hack is to play a game on one computer from another computer. Actual Steam games will just download, so pick a local application instead.
+
+On the Windows 8 computer, add any local application as a game to the Steam library. Pick an application that does not consume much resources and that does not do weird things at start-up like attempt to create paths or update itself. People usually use Notepad.
+
+The Windows 8 computer can now open Notepad from Steam, but other computers logged into Steam cannot //play// Notepad.
+
+Windows 8 cannot stream games over Steam Link on its own. A computer needs the Steam OS to stream over Steam Link. But the Steam Link Hardware can stream. Use the Steam Link Hardware to connect to the Windows 8 computer.
+
+Now the Windows 10 computer sees `Notepad` in its game library thanks to the Steam Link Hardware. Play `Notepad`. On Windows 8, minimize Big Picture and minimize `Notepad`. On Windows 10 `Alt+Tab` between the streaming game application and the Windows 10 applications. Certain keys are not picked up by the game application, notably the `Win` key. Pressing this only affects the Windows 10 computer.
+
+//Setup://
+
+* Windows 8 computer connects to LAN via WiFi
+** start up computer
+** open Steam
+** Add a non-Steam game
+*** add `notepad++` or a similar game that does not consume much resources
+** go into big picture mode
+* Steam Link on the LAN via Ethernet or WiFi
+** connect Steam controller
+** press controller power button to wake the Steam Link
+** Steam Link should open a screen showing computers to connect to
+** Select the Windows 8 computer
+* Windows 10 computer connects to LAN via WiFi
+** start up computer
+** open Steam
+** go into big picture mode
+** search game library for `notepad++`
+** //play// game
+* On Windows 8 computer
+** minimize big picture to return to the desktop
+** minimize `notepad++`
+* On Windows 10 computer:
+** `notepad++` window goes away
+** display appears black and white
+** just `Alt+Tab` once between this streaming display and the local Windows 10 display
+** returning to the Windows 8 stream, the display has color</pre>
 </div>
 <div created="20191227213555423" modified="20191228011801151" tags="" title="Contents">
 <pre>! How to
@@ -11609,7 +11684,7 @@ I installed Winamp from my own copy of the 5.666 installer.
 * hit `Win` key
 * type `Power and sleep`</pre>
 </div>
-<div created="20191227223805427" modified="20191227230630414" tags="Windows" title="Windows color">
+<div created="20191227223805427" modified="20200206132101360" tags="Windows" title="Windows color">
 <pre>! Themes
 
 !! Setup
@@ -11618,10 +11693,41 @@ I installed Winamp from my own copy of the 5.666 installer.
 
 !! Change the theme
 
+!!! Windows 10
+
 * hit `Win` key
 * type `Themes`
 * click `Colors`
-* scroll down to `Choose your app mode` and select `Dark`</pre>
+* scroll down to `Choose your app mode` and select `Dark`
+
+!! Ghost around fonts and icons
+* //Issue:// SONY TV + Windows 10 causes a ghost around text that makes it look terrible
+** this happens after I exit Steam Big Picture Mode
+* //Solution://
+** strangely, logging in as another user, then logging back into my account fixes the problem
+** or just do not exit Steam :)
+
+Also Use `SDR` instead of `HDR`
+
+* Press `Win`
+* type ''Display Settings''
+* click on ''Advanced Display Settings''
+* check that dynamic range is `SDR`
+
+//There is also a place to turn Windows affects on/off for graphics/performance optimziation, but I forget where that is.//
+
+!!! Windows 8
+
+* hit `Win-x` then `p` for //Control Panel//
+** wait for //Control Panel// to open
+* hit `p` again for //Personalization// then hit `Enter`
+* select a Dark theme
+** make your own by starting with any theme
+** click `Desktop Background` to set the Desktop image
+** click `Color` to set the colors (takes you to `Control Panel\All Control Panel Items\Personalization\Color and Appearance`)
+** save the new theme
+* the default high-contrast themes are not universally usable because some applications hard-code the background as white
+* compensate for this by making a nordic version of a dark theme: mute the foreground colors from pure white to grey until the grey text is visible on hard-coded white backgrounds</pre>
 </div>
 <div created="20191227230917802" modified="20191227231217540" tags="Windows" title="Windows PowerShell">
 <pre>! ~PowerShell instead of Command Prompt
