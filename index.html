@@ -193,6 +193,8 @@ Error message and password prompt
 
 <li>$:/state/showeditpreview</li>
 
+<li>$:/state/sidebar</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -10054,6 +10056,9 @@ very-muted-foreground: #2d3038
 <div created="20200205173239570" modified="20200205173239570" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
+<div created="20200206134027569" modified="20200206134053353" title="$:/state/sidebar">
+<pre>yes</pre>
+</div>
 <div created="20191228075948921" modified="20200205184822125" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
@@ -10066,7 +10071,7 @@ very-muted-foreground: #2d3038
 <div created="20191227212754790" modified="20200131133541058" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20200206131853674" list="[[Windows color]] [[Audio Work Station]] Contents [[What is this?]]" modified="20200206131853674" title="$:/StoryList">
+<div created="20200206133921767" list="[[Windows color]] [[Audio Work Station]] Contents [[What is this?]]" modified="20200206134353685" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191228080007433" modified="20191228080007433" title="$:/temp/HidePluginWarning">
@@ -10085,19 +10090,19 @@ very-muted-foreground: #2d3038
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/cygwin64/home/Mike/tiddlywiki/this-old-windows-computer/index.html&quot;
+            &quot;text&quot;: &quot;https://sustainablelab.github.io/this-old-windows-computer/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;sustainablelab.github.io&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;&quot;
+            &quot;text&quot;: &quot;sustainablelab.github.io&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;file:&quot;
+            &quot;text&quot;: &quot;https:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -10105,7 +10110,7 @@ very-muted-foreground: #2d3038
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/cygwin64/home/Mike/tiddlywiki/this-old-windows-computer/index.html&quot;
+            &quot;text&quot;: &quot;/this-old-windows-computer/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -10113,15 +10118,15 @@ very-muted-foreground: #2d3038
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;file://&quot;
+            &quot;text&quot;: &quot;https://sustainablelab.github.io&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1280&quot;
+            &quot;text&quot;: &quot;1360&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;720&quot;
+            &quot;text&quot;: &quot;768&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -11684,7 +11689,7 @@ I installed Winamp from my own copy of the 5.666 installer.
 * hit `Win` key
 * type `Power and sleep`</pre>
 </div>
-<div created="20191227223805427" modified="20200206132101360" tags="Windows" title="Windows color">
+<div created="20191227223805427" modified="20200206134346851" tags="Windows" title="Windows color">
 <pre>! Themes
 
 !! Setup
@@ -11704,10 +11709,16 @@ I installed Winamp from my own copy of the 5.666 installer.
 * //Issue:// SONY TV + Windows 10 causes a ghost around text that makes it look terrible
 ** this happens after I exit Steam Big Picture Mode
 * //Solution://
-** strangely, logging in as another user, then logging back into my account fixes the problem
+** strangely, logging in as another user, then logging back into my account fixes the problem:
 ** or just do not exit Steam :)
 
-Also Use `SDR` instead of `HDR`
+I took screenshots before and after to compare:
+[img[img/fix-by-switching-user-accounts.PNG]]
+[img[img/display-after-exiting-steam.PNG]]
+
+They look identical. That tells me the issue is with a Windows display setting, not the data being sent to the screen. Perhaps there is a setting in Steam to toggle.
+
+Also Use `SDR` on the SONY display instead of `HDR`
 
 * Press `Win`
 * type ''Display Settings''
